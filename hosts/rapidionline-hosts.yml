@@ -1,0 +1,99 @@
+generated: '2026-10-21'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 7
+  own: 4
+  other_domain: 3
+  platform: 0
+  roles:
+  - api
+  - docs
+  - identity
+  - other
+  - website
+hosts:
+- host: api.myrapidi.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: myrapidi.com
+  role: api
+  relation: other-domain
+- host: api.rapidionline.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: rapidionline.com
+  role: api
+  relation: own
+- host: info.rapidionline.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: rapidionline.com
+  role: other
+  relation: own
+- host: myrapidi.com
+  found_by:
+  - apis[]
+  types: []
+  serves:
+  - api
+  registrable_domain: myrapidi.com
+  role: other
+  relation: other-domain
+- host: rapidionline.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  serves: []
+  registrable_domain: rapidionline.com
+  role: website
+  relation: own
+- host: www.myrapidi.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Login
+  serves: []
+  registrable_domain: myrapidi.com
+  role: identity
+  relation: other-domain
+- host: www.rapidionline.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - TermsOfService
+  - PrivacyPolicy
+  - Blog
+  - GettingStarted
+  - Documentation
+  - Pricing
+  - Support
+  serves:
+  - docs
+  registrable_domain: rapidionline.com
+  role: docs
+  relation: own

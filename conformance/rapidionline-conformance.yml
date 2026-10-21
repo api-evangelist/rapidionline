@@ -1,0 +1,28 @@
+generated: '2026-10-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.rapidionline.com/en/blog/gdpr-data-integration.md
+sources:
+- https://www.rapidionline.com/en/blog/gdpr-data-integration.md
+- https://www.rapidionline.com/en/privacy-policy.md
+- https://www.rapidionline.com/en/product-updates/salesforce-security-updates-2025-crucial-steps-for-rapidi-integration-customers.md
+- https://www.rapidionline.com/en/product-updates/how-to-enable-security-keys-on-myrapidi.md
+standards:
+- id: gdpr
+  conforms: false
+  evidence: Rapidi uses OpSourced (RailsMachine) as a partner for monitoring and maintenance of Rapidi’s hosting environment at AWS. OpSourced
+    complies with the EU US Privacy Shield Framework set forth by the United States Department of Commerce with respect to the collection, use,
+    and retention of Personal Data transferred from the European Union and the United Kingdom to the United States.
+- id: openapi-3.1
+  conforms: true
+  evidence: the document declares 3.1.0
+- id: oauth2
+  conforms: false
+  evidence: no securitySchemes declared
+- id: rfc9457
+  conforms: false
+  evidence: no response declares application/problem+json
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key parameter on mutating operations
+docs: https://www.rapidionline.com/en/blog/gdpr-data-integration.md

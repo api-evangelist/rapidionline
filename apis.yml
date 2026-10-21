@@ -1,23 +1,107 @@
 aid: rapidionline
+
 name: Rapidi
-description: 'Rapidi is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Rapidi provides pre‑built, no‑code integrations that keep ERP and CRM systems such as Microsoft Dynamics, Salesforce and HubSpot in sync. The platform offers a visual mapping interface, real‑time and scheduled sync options, error handling dashboards, and on‑premise connector capabilities, enabling businesses to automate data flows across multiple applications within weeks of deployment.'
+
 url: https://raw.githubusercontent.com/api-evangelist/rapidionline/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+- Integration
+- ERP
+- CRM
+- Automation
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/rapidionline-plans-pricing.yml
+- type: Spectral
+  url: rules/rapidionline-rules.yml
+- type: Vocabulary
+  url: vocabulary/rapidionline-vocabulary.yml
+- type: Conformance
+  url: conformance/rapidionline-conformance.yml
+- type: LLMsTxt
+  url: llms/rapidionline-llms.txt
+- type: WellKnown
+  url: well-known/rapidionline-well-known.yml
+- type: Hosts
+  url: hosts/rapidionline-hosts.yml
+- type: TermsOfService
+  url: https://www.rapidionline.com/en/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.rapidionline.com/en/privacy-policy
+- type: Blog
+  url: https://www.rapidionline.com/en/blog
+- type: GettingStarted
+  url: https://www.rapidionline.com/en/product-updates/how-to-setup-transfers-in-myrapidi-a-step-by-step-guide
+- type: DomainSecurity
+  url: security/rapidionline-domain-security.yml
 - type: Website
   url: https://rapidionline.com/
+- type: Documentation
+  url: https://www.rapidionline.com/en/
+- type: Pricing
+  url: https://www.rapidionline.com/en/pricing
+- type: Support
+  url: https://www.rapidionline.com/en/support
+- type: Login
+  url: https://www.myrapidi.com/
+
+apis:
+- aid: rapidionline:rapidionline-api
+  name: Rapidi API
+  description: 'Rapidi API as documented publicly: 1 operations. Contract generated from the documentation by API Evangelist (2026-10-21); not
+    the provider''s own document.'
+  humanURL: https://www.rapidionline.com/en/product-updates/introducing-the-myrapidi-rest-api.md
+  baseURL: https://myrapidi.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/rapidionline-openapi-generated.yml
+    x-provenance: generated
+
+x-coverage:
+  state: gated
+  reason: partner-login
+  method: derived
+  generated: '2026-10-21'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company serves an API surface but requires credentials before any description of it can be read
+  evidence:
+  - url: https://api.myrapidi.com/mcp
+    status: 401
+  - url: https://www.rapidionline.com/mcp
+    status: 401
+  - url: https://www.myrapidi.com/mcp
+    status: 401
+  - url: https://api.rapidionline.com/mcp
+    status: 401
+  - url: https://rapidionline.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 21
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

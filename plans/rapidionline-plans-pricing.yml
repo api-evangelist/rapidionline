@@ -1,0 +1,29 @@
+generated: '2026-10-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.rapidionline.com/en/pricing
+sources:
+- https://www.rapidionline.com/en/pricing
+- https://www.rapidionline.com/en/pricing/overview.md
+- https://www.rapidionline.com/en/blog/data-integration-plan-project.md
+name: Rapidi pricing
+audience: business-product
+pricing_basis: per-seat
+plans:
+- name: Entry
+  price_text: €305 $335 per month billed annually
+  billing_period: monthly
+  description: An entry solution for businesses looking to synchronize two different applications
+- name: Business
+  price_text: €605 $675 per month billed annually
+  billing_period: monthly
+  description: A standard solution for businesses looking to integrate 2 or more applications
+- name: Enterprise
+  price_text: €1210 $1350 per month billed annually
+  billing_period: monthly
+  description: For companies that need a complete solution to integrate their front and back office applications
+- name: Unlimited
+  price_text: €2550 $2800 per month billed annually
+  billing_period: monthly
+  description: For complex integration needs that require higher performance
+docs: https://www.rapidionline.com/en/pricing

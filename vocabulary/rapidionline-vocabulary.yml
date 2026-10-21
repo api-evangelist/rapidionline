@@ -1,0 +1,15 @@
+generated: '2026-10-21'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/rapidionline-openapi-generated.yml
+vocabulary:
+  name: Rapidi Domain Vocabulary
+  description: 'Terms declared by Rapidi''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-21'
+  terms:
+  - term: Wiki
+    definition: 'Resource group in the contract; its operation GET /wiki/{restapi}: GET /wiki/{restApi}'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/rapidionline-openapi-generated.yml

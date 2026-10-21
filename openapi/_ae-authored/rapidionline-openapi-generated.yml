@@ -1,0 +1,46 @@
+openapi: 3.1.0
+info:
+  title: Rapidi API
+  version: '2026-10-21'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-21: 1 operation(s) read from 1 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Rapidi has published no machine-readable contract that the pipeline
+    could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 0
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-21'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.rapidionline.com/en/product-updates/introducing-the-myrapidi-rest-api.md
+servers:
+- url: https://myrapidi.com
+paths:
+  /wiki/{restapi}:
+    get:
+      operationId: get_wiki_restapi
+      tags:
+      - Wiki
+      summary: GET /wiki/{restApi}
+      x-source: https://www.rapidionline.com/en/product-updates/introducing-the-myrapidi-rest-api.md
+      parameters:
+      - name: restapi
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl requests in our [REST API documentation](https://myrapidi.com/wiki/REST_API) are written, and how it looks in the Request
+          Constructor:  '
+tags:
+- name: Wiki

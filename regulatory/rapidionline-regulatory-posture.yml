@@ -1,0 +1,44 @@
+generated: '2026-10-21'
+method: probed
+source: https://www.rapidionline.com/en/privacy-policy.md
+signals:
+  data_subject_request:
+    - evidence:
+        - source: https://www.rapidionline.com/en/privacy-policy.md
+          http_status: 200
+          fetched: /tmp/privacy.html
+          quote: "We will keep your data until you ask us to permanently delete it by sending an email to info [at] rapidionline [dot] com."
+      section: "Collection and Use of Personal Information"
+      note: Users can request deletion of their personal data.
+  data_retention:
+    - evidence:
+        - source: https://www.rapidionline.com/en/privacy-policy.md
+          http_status: 200
+          fetched: /tmp/privacy.html
+          quote: "We will keep your data until you ask us to permanently delete it by sending an email to info [at] rapidionline [dot] com."
+      section: "Collection and Use of Personal Information"
+      note: Retains data until user requests deletion.
+  subprocessors:
+    - evidence:
+        - source: https://www.rapidionline.com/en/privacy-policy.md
+          http_status: 200
+          fetched: /tmp/privacy.html
+          quote: "We sometimes hire vendor companies to provide limited services on our behalf, including packaging, mailing, and delivering items, sending postal mail, providing technical support, and processing event registrations."
+      section: "Disclosure of Personal Information"
+      note: Uses vendor companies as subprocessors for limited services.
+  incident_notification:
+    - evidence:
+        - source: https://www.rapidionline.com/en/privacy-policy.md
+          http_status: 200
+          fetched: /tmp/privacy.html
+          quote: "We may also disclose your personal information if required to do so by law or in the good faith belief that such action is necessary in connection with a sale, merger, transfer, exchange, or other disposition..."
+      section: "Disclosure of Personal Information"
+      note: Mentions legal disclosures but does not specify breach notification.
+  data_residency:
+    - evidence:
+        - source: https://www.rapidionline.com/en/privacy-policy.md
+          http_status: 200
+          fetched: /tmp/privacy.html
+          quote: "Because we have a global presence, your personal information may be shared with other offices or subsidiaries within Rapidi in Europe, USA, Australia, and elsewhere."
+      section: "Disclosure of Personal Information"
+      note: Data may be transferred internationally.
